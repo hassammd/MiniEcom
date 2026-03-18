@@ -24,19 +24,18 @@ const Products = () => {
     fetchData();
   }, []);
 
-  console.log("this is data from axios", products);
   return (
     <>
       {loading ? (
         <Loader />
       ) : (
-        <div className="flex flex-wrap gap-[30px] justify-center ">
+        <div className="container   flex flex-wrap gap-[30px] justify-center py-[110px]   ">
           {products
             ? products.map((items) => {
                 return (
                   <div
                     onClick={() => navigate(`/products/${items.id}`)}
-                    className="bg-[#F3F4F4] gap-3 px-4 py-6 w-[18%] flex flex-col rounded-xl"
+                    className="bg-[#F3F4F4] gap-3 px-4 py-6 w-[18%] flex  flex-col rounded-xl cursor-pointer"
                   >
                     <div className="flex items-center justify-center">
                       <img
